@@ -1,0 +1,113 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto;
+  padding: 0;
+  background-size: cover;
+  background-position: center;
+  box-sizing: border-box;
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  background-color: #f8f9fa; /* Color de fondo del encabezado */
+  padding: 10px 0; /* Añade relleno interno superior e inferior */ 
+}
+
+header img {
+  max-width: 100px;
+  /* Ajusta el tamaño máximo del logo */
+  height: auto;
+  /* Mantiene la proporción */
+  margin-right: 20px;
+  /* Espacio a la derecha del logo */
+}
+
+.navbar {
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  color: aliceblue;
+  padding: 1rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Estilos para mover el campo de búsqueda a la derecha */
+@media (min-width: 768px) {
+  .navbar .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navbar .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar .form-inline {
+    margin-left: auto;
+    display:flex;
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Dos columnas de igual tamaño */
+  gap: 20px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.card {
+  border: 2px solid black;
+  box-shadow: 0 3px 6px black;
+  padding: 16px;
+  text-align: start;
+  z-index: 0;
+}
+
+.card .card-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-body {
+  padding-left: 20px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  margin-bottom: 16px;
+}
+
+.text-body-secondary {
+  color: #6c757d;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr; /* Cambia a una columna en pantallas pequeñas */
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px; /* Puedes ajustar la altura según sea necesario */
+  text-align: center; /* Centra el contenido del footer */
+  margin-top: 20px; /* Añade un espacio en la parte superior */
+  bottom: 0; /* Posiciona el footer en la parte inferior */
+  left: 0; /* Alinea el footer a la izquierda */
+  right: 0; /* Alinea el footer a la derecha */
+  background-color: #f8f9fa; /* Cambia el color de fondo del footer */
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
+}
